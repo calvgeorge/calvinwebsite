@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="images/knot.svg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <title>Calvin George - Research</title>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html"><img class="knot-logo rotate" src="images/knot.svg" alt="Spinning knot logo"></a>
+    <div class="nav-options">
+      <a href="index.html">Home</a>
+      <p class="nav-underline">Research</p>
+      <a href="CalvinGeorgeCV.pdf">CV</a>
+    </div>
+  </nav>
+
+  <section class="introduction-container">
+    <div class="research-header">
+      <div class="research-container">
+        <div class="research-title">
+          <h1>Calvin George</h1>
+        </div>
+        <div class="research-subheader">
+          <p>Mathematics / Asian Societies, Cultures, and Languages (ASCL) @ Dartmouth College</p>
+          <i>Expected Graduation: June 2024</i>
+          <br /><br />
+          <p>Mathematician specializing in <strong>number theory</strong>.</p>
+        </div>
+        <h2 class="floating floating-text">&#8595;</h2>
+      </div>
+    </div>
+  </section>
+
+  <div class="research-background">
+    <div class="research-main-content" style="padding-bottom: 100px;">
+      <div class="publication-container">
+        <h1>Publications</h1>
+        <div class="card-row">
+          <div class="cards">
+            <div class="card-content">
+              <div class="card-header">
+                <h2>An approach to normal polynomials through symmetrization and symmetric reduction</h2>
+              </div>
+              <p class="card-body">Preprint with Darien Connoly, Xiang-Dong Hou, Adam Madro, and Vincenzo Pallozzi Lavorante.
+              </p>
+            </div>
+            <a class="button" href="https://arxiv.org/abs/2309.05470" target="_blank">View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-col2">
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <b>&#160;•&#160;</b>
+            <a href="research.html">Research</a>
+            <b>&#160;•&#160;</b>
+            <a href="CalvinGeorgeCV.pdf">CV</a>
+            <b>&#160;•&#160;</b>
+            <a href="https://www.linkedin.com/in/calvin-george-49144920b/" target="_blank">LinkedIn</a>
+          </div>
+          <a class="footer-text" href="mailto:calvin.d.george.24@dartmouth.edu">calvin.d.george.24@dartmouth.edu</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        gsap.from(".research-header", { duration: 0.6, y: 6 });
+      });
+
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.utils.toArray('.cards').forEach(box => {
+        gsap.fromTo(box, {
+          autoAlpha: 0,
+          y: 50
+        }, {
+          scrollTrigger: {
+            trigger: box,
+            once: false
+          },
+          duration: 1,
+          autoAlpha: 1,
+          y: 0
+        });
+      });
+
+    </script>
+</body>
+
+</html>
